@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%= locals.title %></title>
+		<link rel="stylesheet" href="/stylesheets/style.css" />
+	</head>
+	<body>
+		<h1><%= locals.title %></h1>
+		<% locals.messages.forEach(message => { %>
+		<article>
+			<p><%= message.text %></p>
+			<span><%= message.user %></span>
+			<span><%= message.added %></span>
+		</article>
+		<% }); %>
+	</body>
+</html>

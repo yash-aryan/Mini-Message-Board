@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%= locals.title %></title>
+		<link rel="stylesheet" href="/stylesheets/style.css" />
+	</head>
+	<body>
+		<header>
+			<h1><%= locals.title %></h1>
+			<a href="./">Discard Message</a>
+		</header>
+		<form action="/new" method="post">
+			<label for="author-input">
+				Author
+				<input type="text" name="author" id="author-input" />
+			</label>
+			<label for="message-input">
+				Message
+				<textarea name="message" id="message-input"></textarea>
+			</label>
+			<button type="reset">Clear</button>
+			<button type="submit">Confirm</button>
+		</form>
+	</body>
+</html>

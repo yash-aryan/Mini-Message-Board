@@ -5,13 +5,18 @@
 		<link rel="stylesheet" href="/stylesheets/style.css" />
 	</head>
 	<body>
-		<h1><%= locals.title %></h1>
-		<% locals.messages.forEach(message => { %>
-		<article>
-			<p><%= message.text %></p>
-			<span><%= message.user %></span>
-			<span><%= message.added %></span>
-		</article>
-		<% }); %>
+		<header>
+			<h1><%= locals.title %></h1>
+			<a href="./new">Add Message</a>
+		</header>
+		<main>
+			<% locals.messages.forEach(message => { %>
+			<article>
+				<p><%= message.text %></p>
+				<span><%= message.user %></span>
+				<span><%= message.added %></span>
+			</article>
+			<% }); %>
+		</main>
 	</body>
 </html>
